@@ -67,9 +67,9 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="#" class="header-bottom__action">
+                    <div onclick="toggleModal()" class="header-bottom__action">
                         Запись в салон
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,9 +84,9 @@
                 <div class="s01__header">
                     Каждая красота здесь получит свою оправу
                 </div>
-                <a href="#" class="s01__action">
+                <div onclick="toggleModal()" class="s01__action">
                     Запись в салон
-                </a>
+                </div>
 
                 <div class="s01__scroll"></div>
             </div>
@@ -133,7 +133,7 @@
             </div>
         </div>
 
-        <div class="info row">
+        <div class="info row" id="about">
             <div class="col-md-3 info-item">
                 <div class="info-item__header">
                     Стиль
@@ -171,50 +171,34 @@
 
     <div class="s02">
         <div class="container">
-            <div class="s02-slider owl-carousel">
-                <div class="s02-item">
+            <div class="row align-items-center">
+                <div class="col-md-5">
                     <div class="s02-item__content">
                         <div class="s02-item__header">
                             Созданный в 1994 году, бренд Camille A – воплощение его создательницы – сильный,
                             энергичный, женственный.
                         </div>
                         <div class="s02-item__text">
-                            Продуманные до мелочей стилистом-парикмахером, мастером по окрашиванию волос и визажистом
+                            Продуманные до мелочей стилистом-парикмахером, мастером по окрашиванию волос и
+                            визажистом
                             прическа и оттенок волос этой женщины – истинное продолжение ее индивидуальности.
                         </div>
-                    </div>
-                    <div class="s02-item__image">
-                        <img src="/assets/img/s02-1.png" />
                     </div>
                 </div>
-                <div class="s02-item">
-                    <div class="s02-item__content">
-                        <div class="s02-item__header">
-                            Созданный в 1994 году, бренд Camille A – воплощение его создательницы – сильный,
-                            энергичный, женственный.
+                <div class="col-md-7">
+                    <div class="s02-slider owl-carousel">
+                        <div class="s02-item">
+                            <img src="/assets/img/s02-1.png" />
                         </div>
-                        <div class="s02-item__text">
-                            Продуманные до мелочей стилистом-парикмахером, мастером по окрашиванию волос и визажистом
-                            прическа и оттенок волос этой женщины – истинное продолжение ее индивидуальности.
+                        <div class="s02-item">
+                            <img src="/assets/img/s02-1.png" />
                         </div>
-                    </div>
-                    <div class="s02-item__image">
-                        <img src="/assets/img/s02-1.png" />
-                    </div>
-                </div>
-                <div class="s02-item">
-                    <div class="s02-item__content">
-                        <div class="s02-item__header">
-                            Созданный в 1994 году, бренд Camille A – воплощение его создательницы – сильный,
-                            энергичный, женственный.
+                        <div class="s02-item">
+                            <img src="/assets/img/s02-1.png" />
                         </div>
-                        <div class="s02-item__text">
-                            Продуманные до мелочей стилистом-парикмахером, мастером по окрашиванию волос и визажистом
-                            прическа и оттенок волос этой женщины – истинное продолжение ее индивидуальности.
+                        <div class="s02-item">
+                            <img src="/assets/img/s02-1.png" />
                         </div>
-                    </div>
-                    <div class="s02-item__image">
-                        <img src="/assets/img/s02-1.png" />
                     </div>
                 </div>
             </div>
@@ -222,7 +206,7 @@
     </div>
 
     <div class="container">
-        <div class="services">
+        <div class="services" id="services">
             <div class="services__header">
                 <div class="services__title">
                     Услуги и цены
@@ -983,7 +967,7 @@
             <form class="form01-form">
                 <div class="select-wrapper">
                     <select>
-                        <option disabled>Выберите услугу</option>
+                        <option disabled selected>Выберите услугу</option>
                         <option>Стрижка</option>
                         <option>Укладка</option>
                         <option>Плетение</option>
@@ -997,10 +981,10 @@
         </div>
     </div>
 
-    <div class="gallery">
+    <div class="gallery" id="gallery">
         <div class="container">
             <div class="gallery__header">
-                Фотогаларея
+                Фотогалерея
             </div>
             <div class="gallery-carousel owl-carousel">
                 <div class="gallery-carousel__item">
@@ -1035,7 +1019,7 @@
                         время –
                         в каждом Camille A с вами будут работать специалисты наивысшего уровня.
                     </div>
-                    <div class="s03__action">
+                    <div class="s03__action" onclick="toggleModal()">
                         Запись в салон
                     </div>
                 </div>
@@ -1058,7 +1042,7 @@
             <button type="submit">Запись в салон</button>
         </form>
 
-        <div class="map">
+        <div class="map" id="contacts">
             <div id="map"></div>
             <div class="map__content">
                 <div class="map__header">
@@ -1075,7 +1059,7 @@
                 </div>
 
                 <div class="map-actions">
-                    <div class="map-actions__btn">
+                    <div class="map-actions__btn" onclick="toggleModal()">
                         Запись в салон
                     </div>
                     <a href="https://www.facebook.com/CamilleAlbaneUA/" target="_blank" class="map-actions__soc">
@@ -1125,12 +1109,43 @@
         </div>
     </footer>
 
+    <div class="modal modal--open">
+        <div class="modal__bg" onclick="toggleModal()"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                Записаться на услуги
+            </div>
+            <div class="modal__subheader">
+                Менеджер свяжется с вами в ближайшее время
+            </div>
+
+            <form class="modal-form">
+                <div class="select-wrapper">
+                    <select>
+                        <option disabled selected>Выберите услугу</option>
+                        <option>Стрижка</option>
+                        <option>Укладка</option>
+                        <option>Плетение</option>
+                        <option>Лечение волос</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="Ваше имя" />
+                <input type="text" placeholder="Номер телефона" />
+                <button type="submit">Запись в салон</button>
+            </form>
+        </div>
+    </div>
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbcr7L9kuL05_hSogIqNmGEJj5x2hSipY&callback=initMap"
         async defer></script>
     <script src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
+        function toggleModal() {
+            jQuery('.modal').toggleClass('modal--open');
+        }
+
         function initMap() {
             var myLatLng = {
                 lat: 50.491204,
@@ -1150,6 +1165,17 @@
         }
 
         jQuery(document).ready(function () {
+            function goToByScroll(id) {
+                jQuery('html,body').animate({
+                    scrollTop: jQuery(id).offset().top - 130
+                }, 'slow');
+            }
+
+            jQuery(".header-bottom__menu .menu > li > a").click(function (e) {
+                e.preventDefault();
+                goToByScroll(jQuery(this).attr('href'));
+            });
+
             jQuery('.sales, .s02-slider').owlCarousel({
                 items: 1,
                 nav: true,
