@@ -93,6 +93,32 @@ img {
     width: 100%;
     z-index: 1000;
 
+    &-menu-toggle {
+        background: #D2AA86;
+        border: 2px solid #D2AA86;
+        box-sizing: border-box;
+        padding: 7px 20px;
+
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        cursor: pointer;
+        font-size: 15px;
+
+        color: #202020;
+        transition: all .3s;
+        display: none;
+
+        &:hover {
+            color: #D2AA86;
+            background: transparent;
+        }
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            display: block;
+        }
+    }
+
     &-top {
         background: #fff;
 
@@ -103,16 +129,18 @@ img {
             justify-content: space-between;
 
 
-            @media(max-width: map-get($grid-breakpoints, 'md')) {
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                height: 35px;
+                
                 >* {
 
-                    &:nth-child(1),
                     &:nth-child(2) {
                         display: none;
                     }
 
                     &:nth-child(3) {
                         font-size: 0;
+                        text-align: right;
                     }
                 }
             }
@@ -128,6 +156,7 @@ img {
             span {
                 color: #393939;
                 font-weight: 600;
+                font-size: 15px;
             }
         }
 
@@ -138,6 +167,10 @@ img {
 
             a {
                 margin-right: 20px;
+
+                @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                    margin-right: 10px;
+                }
             }
         }
     }
@@ -150,6 +183,10 @@ img {
 
             img {
                 display: block;
+
+                @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                    height: 30px;
+                }
             }
 
             &:hover {
@@ -162,9 +199,18 @@ img {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                height: 50px;
+                padding: 10px
+            }
         }
 
         &__menu {
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                display: none;
+            }
+
             .menu {
                 display: flex;
                 align-items: center;
@@ -220,13 +266,17 @@ img {
                 color: #D2AA86;
                 background: transparent;
             }
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                display: none;
+            }
         }
     }
 }
 
 
 .s01 {
-    background: url(/assets/img//s01bg.png) no-repeat center / cover;
+    background: url(/assets/img/s01bg.png) no-repeat center / cover;
 
     &__content {
         position: relative;
@@ -246,6 +296,11 @@ img {
         letter-spacing: 0.15em;
 
         color: #FFFFFF;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            text-align: center;
+            width: 100%;
+        }
     }
 
     &__header {
@@ -259,6 +314,14 @@ img {
         font-size: 61px;
 
         color: #FFFFFF;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            margin-bottom: 35px;
+            line-height: 1.3;
+            font-size: 26px;
+            text-align: center;
+            width: 100%;
+        }
     }
 
     &__action {
@@ -283,6 +346,11 @@ img {
         &:hover {
             background: #fff;
             color: #000;
+        }
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            width: calc(100% - 60px);
+            margin: 0 30px;
         }
     }
 
@@ -332,8 +400,12 @@ img {
 .sales {
     display: block;
     margin-top: 100px;
-
     padding: 0 100px;
+
+    @media(max-width: map-get($grid-breakpoints, 'lg')) {
+        padding: 0;
+        margin-top: 30px;
+    }
 
     .owl-nav {
         position: absolute;
@@ -345,6 +417,14 @@ img {
         align-items: center;
         pointer-events: none;
         justify-content: space-between;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            top: 100%;
+            right: 0;
+            height: auto;
+            width: auto;
+            left: auto;
+        }
 
         >* {
             pointer-events: all;
@@ -359,6 +439,11 @@ img {
             box-sizing: border-box;
             transition: all .3s;
 
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                width: 40px;
+                height: 40px;
+            }
+
             &:hover {
                 opacity: .75;
             }
@@ -366,6 +451,10 @@ img {
 
         .owl-prev {
             background: url(/assets/img/arrow-left.svg) no-repeat center center / 15px !important;
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                border-right: 0 !important;
+            }
         }
 
         .owl-next {
@@ -378,6 +467,10 @@ img {
         align-items: center;
         justify-content: space-between;
 
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            flex-wrap: wrap;
+        }
+
         &__header {
             width: 32%;
             font-style: normal;
@@ -386,6 +479,14 @@ img {
             font-size: 36px;
 
             color: #000000;
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                width: 100%;
+                font-size: 29px;
+                line-height: 1.3;
+                text-align: center;
+                margin-bottom: 9px;
+            }
         }
 
         &__text {
@@ -396,6 +497,11 @@ img {
             font-size: 16px;
 
             color: #000000;
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                width: 100%;
+                text-align: center;
+            }
         }
 
         &__number {
@@ -410,6 +516,10 @@ img {
             line-height: 143px;
             font-size: 96px;
             z-index: 2;
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                margin: 0 auto;
+            }
 
             color: #000000;
 
@@ -432,7 +542,15 @@ img {
 .info {
     margin-top: 120px;
 
+    @media(max-width: map-get($grid-breakpoints, 'lg')) {
+        margin-top: 100px;
+    }
+
     &-item {
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            margin-bottom: 30px;
+        }
+
         &__header {
             display: block;
             font-style: normal;
@@ -442,6 +560,11 @@ img {
 
             color: #000000;
             margin-bottom: 22px;
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                margin-bottom: 9px;
+                text-align: center;
+            }
         }
 
         &__text {
@@ -449,6 +572,7 @@ img {
             font-weight: 300;
             line-height: 27px;
             font-size: 18px;
+            text-align: center;
 
             color: #000000;
         }
@@ -462,6 +586,11 @@ img {
     position: relative;
     background: url(/assets/img/s02-bg2.svg) no-repeat 40% center, url(/assets/img/s02-bg.svg) no-repeat center center / 85% auto;
 
+    @media(max-width: map-get($grid-breakpoints, 'lg')) {
+        padding: 0;
+        margin-top: 50px;
+    }
+
     .owl-nav {
         position: absolute;
         bottom: 40px;
@@ -471,6 +600,12 @@ img {
         pointer-events: none;
         justify-content: space-between;
         background: #fff;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            top: 100%;
+            bottom: auto;
+            right: 0;
+        }
 
         >* {
             pointer-events: all;
@@ -484,6 +619,11 @@ img {
             border: 2px solid #000000 !important;
             box-sizing: border-box;
             transition: all .3s;
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                width: 40px;
+                height: 40px;
+            }
 
             &:hover {
                 opacity: .75;
@@ -507,6 +647,11 @@ img {
 
         &__content {
             padding-right: 50px;
+
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                padding-right: 0;
+            }
         }
 
         &__header {
@@ -518,6 +663,13 @@ img {
             color: #000000;
             display: block;
             margin-bottom: 60px;
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                font-size: 19px;
+                line-height: 1.4;
+                margin-bottom: 20px;
+                text-align: center;
+            }
         }
 
         &__text {
@@ -528,6 +680,12 @@ img {
 
             color: #000000;
 
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                font-size: 16px;
+                line-height: 1.4;
+                margin-bottom: 20px;
+                text-align: center;
+            }
         }
     }
 }
@@ -541,6 +699,11 @@ img {
         margin-bottom: 55px;
         position: relative;
         z-index: 2;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
     }
 
     &__title {
@@ -563,6 +726,12 @@ img {
         display: block;
 
         color: #000000;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            max-width: 100%;
+            margin-top: 15px;
+            text-align: center;
+        }
     }
 
     &-tabs {
@@ -572,12 +741,22 @@ img {
             justify-content: space-between;
             margin-bottom: 55px;
 
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                flex-wrap: wrap;
+                margin-bottom: 30px;
+            }
+
             li {
                 list-style: none;
                 padding: 14px 22px;
                 border: 2px solid transparent;
                 transition: all .3s;
                 cursor: pointer;
+
+                @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                    flex-grow: 1;
+                    text-align: center;
+                }
 
                 &.active,
                 &:hover {
@@ -599,6 +778,10 @@ img {
         position: relative;
         z-index: 1;
 
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            margin-top: 30px;
+        }
+
         &:before {
             content: '';
             position: absolute;
@@ -607,8 +790,16 @@ img {
             right: -15%;
             width: 100%;
             height: 100%;
-            background: url(/assets//img//services-bg.svg) no-repeat center;
+            background: url(/assets//img//services-bg.svg) no-repeat center center;
             z-index: -1;
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                top: -74%;
+                right: -55%;
+                width: 200%;
+                height: 200%;
+                background: url(/assets//img//services-bg.svg) no-repeat center center/contain;
+            }
         }
 
         img {
@@ -623,6 +814,10 @@ img {
         padding: 17px 0;
         border-bottom: 1px solid #C4C4C4;
 
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            padding: 10px 0;
+        }
+
         &__name {
             font-style: normal;
             font-weight: 300;
@@ -630,6 +825,10 @@ img {
             font-size: 19px;
 
             color: #000000;
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                font-size: 16px;
+            }
         }
 
         &__price {
@@ -640,6 +839,10 @@ img {
             text-align: right;
 
             color: #000000;
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                font-size: 16px;
+            }
 
         }
     }
@@ -665,6 +868,10 @@ img {
     border-top: 2px solid #515151;
     border-bottom: 2px solid #515151;
 
+    @media(max-width: map-get($grid-breakpoints, 'lg')) {
+        margin-top: 40px;
+    }
+
 
     &__header {
         font-style: normal;
@@ -675,6 +882,12 @@ img {
         color: #000000;
         display: block;
         margin-bottom: 9px;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            font-size: 26px;
+            line-height: 1.4;
+            text-align: center;
+        }
     }
 
     &__subheader {
@@ -686,11 +899,22 @@ img {
         color: #000000;
         display: block;
         margin-bottom: 35px;
+
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            text-align: center;
+        }
     }
 
     &-form {
         display: flex;
         margin: 0 -10px;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
 
         .select-wrapper {
             position: relative;
@@ -713,6 +937,12 @@ img {
                 margin: 0;
                 width: 100%;
             }
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                margin: 0 0 10px 0;
+                width: 300px;
+                max-width: 100%;
+            }
         }
 
         select,
@@ -729,6 +959,12 @@ img {
             font-weight: light;
             font-size: 16px;
             color: rgba(0, 0, 0, .6);
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                margin: 0 0 10px 0;
+                width: 300px;
+                max-width: 100%;
+            }
 
             @include placeholder {
                 font-weight: light;
@@ -757,6 +993,12 @@ img {
             color: #000000;
             transition: all .3s;
 
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                margin: 0;
+                width: 300px;
+                max-width: 100%;
+            }
+
             &:hover {
                 color: #D2AA86;
                 background: transparent;
@@ -769,6 +1011,10 @@ img {
 .gallery {
     margin-bottom: -320px;
 
+    @media(max-width: map-get($grid-breakpoints, 'lg')) {
+        margin-bottom: -100px;
+    }
+
     &__header {
         font-style: normal;
         font-weight: bold;
@@ -778,6 +1024,11 @@ img {
         color: #000000;
         display: block;
         margin-bottom: 40px;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
     }
 
     &-carousel {
@@ -785,6 +1036,10 @@ img {
             img {
                 height: 480px;
                 object-fit: cover;
+
+                @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                    height: 150px;
+                }
             }
         }
     }
@@ -799,6 +1054,10 @@ img {
         justify-content: space-between;
         background: #fff;
 
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            top: -55px;
+        }
+
         >* {
             pointer-events: all;
             display: block;
@@ -806,6 +1065,11 @@ img {
             height: 55px;
             border-radius: 0 !important;
             font-size: 0 !important;
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                width: 40px;
+                height: 40px;
+            }
 
             background: #FFFFFF;
             border: 2px solid #000000 !important;
@@ -834,6 +1098,11 @@ img {
     margin-bottom: 40px;
     background: url(/assets/img/s03-bg.png) no-repeat center top / cover;
 
+    @media(max-width: map-get($grid-breakpoints, 'lg')) {
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+
     &__text {
         margin-top: 100px;
         font-style: normal;
@@ -843,6 +1112,12 @@ img {
 
         color: #FFFFFF;
 
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            margin-top: 30px;
+            font-size: 19px;
+            line-height: 1.4;
+            text-align: center;
+        }
     }
 
     &__action {
@@ -863,6 +1138,12 @@ img {
         color: #000000;
         transition: all .3s;
 
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            margin-top: 35px;
+            width: 100%;
+            text-align: center;
+        }
+
         &:hover {
             background: transparent;
             color: #fff;
@@ -879,6 +1160,12 @@ img {
     align-items: center;
     margin: 60px 0;
 
+    @media(max-width: map-get($grid-breakpoints, 'lg')) {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+    }
+
     &__content {
         flex-grow: 1;
     }
@@ -891,6 +1178,10 @@ img {
         color: #000000;
         display: block;
         margin-bottom: 9px;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            text-align: center;
+        }
     }
 
     &__subheader {
@@ -900,6 +1191,11 @@ img {
         font-size: 15px;
         color: #000000;
         display: block;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            text-align: center;
+            margin-bottom: 20px;
+        }
     }
 
     input {
@@ -912,6 +1208,12 @@ img {
         outline: 0;
         -webkit-appearance: none;
         -webkit-border-radius: 0px;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            width: 300px;
+            max-width: 100%;
+            margin: 0 0 10px;
+        }
 
         @include placeholder {
             font-weight: light;
@@ -942,6 +1244,12 @@ img {
         color: #000000;
         transition: all .3s;
 
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            width: 300px;
+            max-width: 100%;
+            margin: 0;
+        }
+
         &:hover {
             color: #D2AA86;
             background: transparent;
@@ -956,6 +1264,10 @@ img {
     line-height: 28px;
     font-size: 19px;
 
+    @media(max-width: map-get($grid-breakpoints, 'lg')) {
+        font-size: 16px;
+    }
+
     color: #000000;
 
     &__header {
@@ -967,6 +1279,12 @@ img {
         color: #000000;
         display: block;
         margin-bottom: 34px;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            margin-bottom: 20px;
+            font-size: 26px;
+            line-height: 1;
+        }
     }
 }
 
@@ -979,6 +1297,12 @@ img {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            flex-direction: column;
+            height: auto;
+            padding: 15px 0;
+        }
     }
 
     &__copyright {
@@ -988,6 +1312,10 @@ img {
         font-size: 14px;
 
         color: #FFFFFF;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            margin-top: 15px;
+        }
     }
 }
 
@@ -1005,6 +1333,10 @@ img {
         height: 100%;
         background: rgba(0, 0, 0, .35);
         z-index: 2;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            display: none;
+        }
     }
 
     #map {
@@ -1022,6 +1354,14 @@ img {
         background: #fff;
         z-index: 3;
         padding: 20px;
+
+        @media(max-width: map-get($grid-breakpoints, 'lg')) {
+            position: relative;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            padding: 30px 0;
+        }
     }
 
     &__header {
@@ -1076,6 +1416,11 @@ img {
             cursor: pointer;
             transition: all .3s;
 
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                padding: 0 10px;
+                font-size: 14px;
+            }
+
             &:hover {
                 background: transparent;
                 color: #D2AA86;
@@ -1097,6 +1442,10 @@ img {
             color: #D2AA86;
             padding: 0 25px;
             transition: all .3s;
+
+            @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                padding: 0 15px;
+            }
 
             &:hover {
                 color: #202020;
@@ -1149,6 +1498,7 @@ img {
         z-index: 2;
         max-width: 100%;
     }
+
     &__header {
         font-style: normal;
         font-weight: 500;
