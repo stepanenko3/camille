@@ -1,23 +1,18 @@
-<!DOCTYPE html>
-<html lang="ru">
+<?php
+/**
+ * The front page template file
+ *
+ * If the user has selected a static page for their homepage, this is what will
+ * appear.
+ * Learn more: https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package WordPress
+ * @subpackage Twenty_Seventeen
+ * @since 1.0
+ * @version 1.0
+ */
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <link rel="shortcut icon" href="/assets/img/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&amp;subset=cyrillic"
-        rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/assets/css/main.min.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-</head>
-
-<body>
-
-
+get_header(); ?>
     <div class="header">
         <div class="header-top">
             <div class="container">
@@ -46,26 +41,10 @@
                         <img src="/assets/img/logo.svg" />
                     </a>
                     <div class="header-bottom__menu">
-                        <div class="menu-%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%bd%d0%be%d0%b5-%d0%bc%d0%b5%d0%bd%d1%8e-container">
-                            <ul id="top-menu" class="menu">
-                                <li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-5"><a
-                                        href="http://camille.stpnnk.top">Главная</a></li>
-                                <li id="menu-item-6" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-6"><a
-                                        href="http://camille.stpnnk.top/">Sample Page<svg class="icon icon-angle-down"
-                                            aria-hidden="true" role="img">
-                                            <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use>
-                                        </svg></a><button class="dropdown-toggle toggled-on" aria-expanded="true"><svg
-                                            class="icon icon-angle-down" aria-hidden="true" role="img">
-                                            <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use>
-                                        </svg><span class="svg-fallback icon-angle-down"></span><span class="screen-reader-text">Collapse
-                                            child menu</span></button>
-                                    <ul class="sub-menu toggled-on">
-                                        <li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-7"><a
-                                                href="http://camille.stpnnk.top">Главная</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+						<?php wp_nav_menu(array(
+							'theme_location' => 'top',
+							'menu_id'        => 'top-menu',
+						)); ?>
                     </div>
                     <div onclick="toggleModal()" class="header-bottom__action">
                         Запись в салон
@@ -968,24 +947,18 @@
             </div>
 
             <form class="form01-form">
-                    <div role="form" class="wpcf7" id="wpcf7-f14-o1" lang="ru-RU" dir="ltr">
-                            <div class="screen-reader-response" role="alert">Одно или несколько полей содержат ошибочные данные. Пожалуйста, проверьте их и попробуйте ещё раз.<ul><li>Поле обязательно для заполнения.</li><li>Поле обязательно для заполнения.</li></ul></div>
-                            <form action="/#wpcf7-f14-o1" method="post" class="wpcf7-form invalid" novalidate="novalidate">
-                            <div style="display: none;">
-                            <input type="hidden" name="_wpcf7" value="14">
-                            <input type="hidden" name="_wpcf7_version" value="5.1.1">
-                            <input type="hidden" name="_wpcf7_locale" value="ru_RU">
-                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f14-o1">
-                            <input type="hidden" name="_wpcf7_container_post" value="0">
-                            <input type="hidden" name="g-recaptcha-response" value="">
-                            </div>
-                            <div class="select-wrapper">
-                                <span class="wpcf7-form-control-wrap servic"><select name="servic" class="wpcf7-form-control wpcf7-select" aria-invalid="false"><option value="Стрижка">Стрижка</option><option value="Укладка">Укладка</option><option value="Плетение">Плетение</option><option value="Лечение волос">Лечение волос</option></select></span>
-                            </div>
-                            <p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required wpcf7-not-valid" aria-required="true" aria-invalid="true" placeholder="Ваше имя"><span role="alert" class="wpcf7-not-valid-tip">Поле обязательно для заполнения.</span></span><br>
-                            <span class="wpcf7-form-control-wrap your-phone"><input type="tel" name="your-phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel wpcf7-not-valid" aria-required="true" aria-invalid="true" placeholder="Номер телефона"><span role="alert" class="wpcf7-not-valid-tip">Поле обязательно для заполнения.</span></span><br>
-                            <button type="submit">Запись в салон</button></p>
-                            <div class="wpcf7-response-output wpcf7-display-none wpcf7-validation-errors" style="display: block;" role="alert">Одно или несколько полей содержат ошибочные данные. Пожалуйста, проверьте их и попробуйте ещё раз.</div></form></div>
+                <div class="select-wrapper">
+                    <select>
+                        <option disabled selected>Выберите услугу</option>
+                        <option>Стрижка</option>
+                        <option>Укладка</option>
+                        <option>Плетение</option>
+                        <option>Лечение волос</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="Ваше имя" />
+                <input type="text" placeholder="Номер телефона" />
+                <button type="submit">Запись в салон</button>
             </form>
         </div>
     </div>
@@ -1037,6 +1010,9 @@
     </div>
 
     <div class="container">
+
+		<?= do_shortcode('[instagram-feed]'); ?>
+
         <form class="form02">
             <div class="form02__content">
                 <div class="form02__header">
@@ -1144,117 +1120,4 @@
             </form>
         </div>
     </div>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbcr7L9kuL05_hSogIqNmGEJj5x2hSipY&callback=initMap"
-        async defer></script>
-    <script src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script>
-        function toggleModal() {
-            jQuery('.modal').toggleClass('modal--open');
-        }
-
-        function initMap() {
-            var myLatLng = {
-                lat: 50.491204,
-                lng: 30.527331
-            };
-
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                center: myLatLng,
-                disableDefaultUI: true
-            });
-
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-            });
-        }
-
-        jQuery(document).ready(function () {
-            function goToByScroll(id) {
-                jQuery('html,body').animate({
-                    scrollTop: jQuery(id).offset().top - 130
-                }, 'slow');
-            }
-
-            jQuery(".header-bottom__menu .menu > li > a").click(function (e) {
-                e.preventDefault();
-                goToByScroll(jQuery(this).attr('href'));
-            });
-
-            jQuery('.sales, .s02-slider').owlCarousel({
-                items: 1,
-                nav: true,
-                autoplay: true,
-                autoplayTimeout: 2000,
-                autoplayHoverPause: true,
-                loop: true,
-                autoplaySpeed: 600,
-                navSpeed: 600,
-                dragEndSpeed: 600
-            });
-
-            jQuery('.gallery-carousel').owlCarousel({
-                items: 2,
-                margin: 22,
-                nav: true,
-                autoplay: true,
-                autoplayTimeout: 2000,
-                autoplayHoverPause: true,
-                loop: true,
-                autoplaySpeed: 600,
-                navSpeed: 600,
-                dragEndSpeed: 600
-            });
-
-            jQuery('.services__list').each(function (i, e) {
-                var child = jQuery(e).children();
-
-                if (child.length > 10) {
-                    jQuery(child).each(function (ci, ce) {
-                        if (ci >= 10) {
-                            jQuery(ce).hide();
-                        }
-                    });
-
-                    jQuery(e).append(
-                        '<div class="col-md-6 services__more">Показать больше</div>'
-                    );
-                }
-            });
-
-            jQuery('.services__list').on('click', '.services__more', function () {
-                if (jQuery(this).html() === 'Показать больше') {
-
-                    jQuery(this).parents('.services__list').children().each(function (i, e) {
-                        jQuery(e).show();
-                    });
-                    jQuery(this).html('Показать меньше');
-                } else {
-
-                    jQuery(this).parents('.services__list').children(':not(.services__more)').each(
-                        function (i, e) {
-                            if (i >= 10) {
-                                jQuery(e).hide();
-                            }
-                        });
-
-                    jQuery(this).html('Показать больше');
-                }
-            });
-        });
-
-        jQuery('ul.services-tabs__header').on('click', 'li:not(.active)', function () {
-            jQuery(this)
-                .addClass('active').siblings().removeClass('active')
-                .closest('div.services-tabs').find('div.services-tabs__content').removeClass('active').eq($(
-                    this).index()).addClass(
-                    'active');
-        });
-    </script>
-</body>
-
-</html>
+<?php get_footer();
