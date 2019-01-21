@@ -468,6 +468,7 @@ img {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 0 20px;
 
         @media(max-width: map-get($grid-breakpoints, 'lg')) {
             flex-wrap: wrap;
@@ -811,8 +812,9 @@ img {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 17px 0;
+        padding: 10px 0;
         border-bottom: 1px solid #C4C4C4;
+        height: 100%;
 
         @media(max-width: map-get($grid-breakpoints, 'lg')) {
             padding: 10px 0;
@@ -822,7 +824,7 @@ img {
             font-style: normal;
             font-weight: 300;
             line-height: 28px;
-            font-size: 19px;
+            font-size: 17px;
 
             color: #000000;
 
@@ -835,7 +837,7 @@ img {
             font-style: normal;
             font-weight: bold;
             line-height: 28px;
-            font-size: 19px;
+            font-size: 17px;
             text-align: right;
 
             color: #000000;
@@ -1402,7 +1404,7 @@ img {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        right:3%;
+        right: 3%;
         background: #fff;
         z-index: 3;
         padding: 15px 20px;
