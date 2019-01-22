@@ -490,6 +490,11 @@ img {
                 text-align: center;
                 margin-bottom: 9px;
             }
+
+            @media(max-width: map-get($grid-breakpoints, 'xl')) {
+                font-size: 29px;
+                line-height: 1.3;
+            }
         }
 
         &__text {
@@ -504,6 +509,11 @@ img {
             @media(max-width: map-get($grid-breakpoints, 'lg')) {
                 width: 100%;
                 text-align: center;
+            }
+
+            @media(max-width: map-get($grid-breakpoints, 'xl')) {
+                font-size: 14px;
+                line-height: 1.3;
             }
         }
 
@@ -522,6 +532,12 @@ img {
 
             @media(max-width: map-get($grid-breakpoints, 'lg')) {
                 margin: 0 auto;
+            }
+
+            @media(max-width: map-get($grid-breakpoints, 'xl')) {
+                font-size: 75px;
+                width: 200px;
+                height: 200px;
             }
 
             color: #000000;
@@ -924,7 +940,11 @@ img {
             .wpcf7-form {
                 display: flex;
                 align-items: center;
-                flex-wrap: wrap;
+                
+                @media(max-width: map-get($grid-breakpoints, 'lg')) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
 
                 .wpcf7-form-control-wrap {
                     max-width: 100%;
@@ -942,7 +962,8 @@ img {
                     margin: 0;
 
                     @media(max-width: map-get($grid-breakpoints, 'lg')) {
-                        flex-wrap: wrap;
+                        flex-direction: column;
+                        align-items: flex-start;
                         width: 100%;
                     }
 
@@ -973,6 +994,10 @@ img {
             position: relative;
             width: calc(25% - 20px);
             margin: 0 10px;
+
+            @media(max-width: map-get($grid-breakpoints, 'xl')) {
+                width: calc(33.3333% - 20px);
+            }
 
             &:before {
                 position: absolute;
@@ -1035,7 +1060,7 @@ img {
             align-items: center;
             justify-content: center;
             height: 55px;
-            padding: 0;
+            padding: 0 30px;
             background: #D2AA86;
             border: 2px solid #D2AA86;
 
@@ -1043,6 +1068,7 @@ img {
             font-weight: 500;
             line-height: 28px;
             font-size: 19px;
+            white-space: nowrap;
 
             color: #000000;
             transition: all .3s;
@@ -1051,6 +1077,14 @@ img {
                 margin: 0;
                 width: 300px;
                 max-width: 100%;
+            }
+
+            @media(max-width: map-get($grid-breakpoints, 'xl')) {
+                width: calc(33.3333% - 20px);
+            }
+
+            @media(max-width: map-get($grid-breakpoints, 'md')) {
+                width: auto;
             }
 
             &:hover {
